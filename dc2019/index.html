@@ -30,6 +30,23 @@
 </head>
 <body>
 
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: '1361733010640564',
+      xfbml: true,
+      version: 'v2.6'
+    });
+  };
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));      
+</script>
+      
 <!-- Abertura -->
  
   <div class="container">
@@ -46,25 +63,16 @@
         Gostou da ideia? Então clique no botão *ENVIAR MENSAGEM*, logo depois do vídeo, e surpreenda os seus
         alunos!!!</p>
     </div>
+    <div  class="fb-send-to-messenger" 
+          messenger_app_id="1361733010640564" 
+          page_id="1304425319574761" 
+          data-ref="parametros"
+          cta_text="LET_US_CHAT" 
+          color="blue" size="xlarge">
+    </div>
   </div>
 <!-- End Abertura -->
 
-<script>      
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1361733010640564',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-  };
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));      
-</script>
 
 <!--
 <div class="fb-messengermessageus" 
@@ -75,14 +83,7 @@
 </div>
 -->
 
-<div class="fb-send-to-messenger" 
-  messenger_app_id="1361733010640564" 
-  page_id="1304425319574761" 
-  data-ref="parametros"
-  cta_text="LET_US_CHAT" 
-  color="blue" 
-  size="xlarge">
-</div>
+
 
 </body>
 </html>
