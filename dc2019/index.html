@@ -37,13 +37,11 @@
     FB.init({
       xfbml            : true,
       version          : 'v4.0'
-    }).then( () => {
-                      FB.getLoginStatus( function(response) {
-                                          alert(response.status); 
-                                        });
-                    }
-            );          
-  }
+    });
+    FB.getLoginStatus(function(response) {
+      alert(response.status); 
+    });
+  };
 
   (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
