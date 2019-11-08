@@ -393,13 +393,13 @@
 												<div id="form-messages"></div>
 												<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
 													<div class="form-group">
-														<input type="text" class="form-control" placeholder="Nome" id="name" name="name" required>
+														<input type="text" class="form-control" placeholder="Escreva aqui seu nome" id="adNome" name="adNome" required>
 													</div>
 													<div class="form-group">
-														<input onFocus="geolocate()" type="text" class="form-control" placeholder="Cidade entrega do livro" id="cidade" name="cidade" required>
+														<input onFocus="geolocate()" type="text" class="form-control" placeholder="Qual a cidade em que o livro será entregue?" id="adCidade" name="adCidade" required>
 													</div>
 													<div class="form-group">
-															<input type="text" class="form-control" placeholder="Telefone Whatsapp" id="telefone" name="telefone" required>
+															<input type="text" class="form-control" placeholder="Telefone Whatsapp" id="adTelefone" name="adTelefone" required>
 													</div>
 													<button type="submit" class="mu-order-btn"><span>RESERVAR AGORA!</span></button>
 												</form>
@@ -552,7 +552,7 @@
         types: ['(cities)'],
         componentRestrictions: { country: "br" }
       };
-		  var input = document.getElementById('cidade');
+		  var input = document.getElementById('adCidade');
 		  var autocomplete = new google.maps.places.Autocomplete(input, options);
 		  autocomplete.setFields(['address_component']);
 	  }
