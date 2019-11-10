@@ -1,1 +1,617 @@
-<script>location.href = "https://www.facebook.com/pagina.aprender.digital"</script>
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64612385-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-64612385-2');
+	</script>
+	<title>APRENDER.digital - O Nome da Gente</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico" />
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Slick slider -->
+	<link href="assets/css/slick.css" rel="stylesheet">
+	<!-- Theme color -->
+	<link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+	<!-- Main Style -->
+	<link href="style.css" rel="stylesheet">
+
+	<!-- Fonts -->
+
+	<!-- Open Sans for body font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+	<!-- Lato for Title -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<script>
+function trataBotaoFormReserva(tipo) {
+	switch (tipo) {
+		case "reservar":
+			return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
+			           <span id='txtBtnReservar' name='txtBtnReservar'>RESERVAR AGORA!</span>
+		            </button>`;
+		case "nova reserva":
+				return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
+							<span id='txtBtnReservar' name='txtBtnReservar'>ENVIAR NOVA RESERVA</span>
+			 			</button>`;
+ 		case "tentar novamente":
+		 		return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
+							<span id='txtBtnReservar' name='txtBtnReservar'>TENTAR NOVAMENTE</span>
+			 			</button>`;
+		 case "enviando":
+		 		return `Enviando reserva. Aguarde...`;
+	}
+}
+</script>
+
+	<!-- Start Header -->
+	<header id="mu-header" class="" role="banner">
+		<div class="container">
+			<nav class="navbar navbar-default mu-navbar">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+						<!-- Text Logo -->
+						<a class="navbar-brand" href="index.html"><i class="fa fa-book" aria-hidden="true"></i>
+							APRENDER.digital</a>
+
+						<!-- Image Logo -->
+						<!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
+
+
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav mu-menu navbar-right">
+							<li><a href="#">INÍCIO</a></li>
+							<li><a href="#mu-book-overview">LIVRO</a></li>
+							<li><a href="#mu-video-review">VÍDEO</a></li>
+							<li><a href="#mu-author">AUTORES</a></li>
+							<li><a href="#mu-testimonials">DEPOIMENTOS</a></li>
+							<li><a href="#mu-pricing"><i class="fa fa-shopping-cart" aria-hidden="true"></i> COMPRAR</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- Start Featured Slider -->
+
+	<section id="mu-hero">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 col-sm-6 col-sm-push-6">
+					<div class="mu-hero-right">
+						<center>
+							<img src="assets/images/capa.png" alt="Ebook img">
+						</center>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-sm-pull-6">
+					<div class="mu-hero-left">
+						<h1>Que tal um livro personalizado?</h1>
+						<p>Sim, um livro em que cada criança faz parte de uma divertida história! E que tal se esse
+							livro, além de divertido, ainda colabore com a alfabetização? Gostou da ideia? Conheça,
+							então, <b>O NOME DA GENTE!</b></p>
+						<a href="#mu-pricing" class="mu-primary-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp; &nbsp; COMPRAR!</a>
+						<!--<span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span>-->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Start Featured Slider -->
+
+	<!-- Start main content -->
+
+	<main role="main">
+
+		<section id="mu-book-overview">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-author-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title">Seja bem-vindo</h2>
+								<span class="mu-header-dot"></span>
+								<p>A descoberta das letras e do mundo que se abre a partir delas encanta a todos! Ver uma
+									criança ler ou escrever uma palavra, pela primeira vez, é um momento mágico e de muita alegria
+									 para toda a família. Por isso, a participação de todos nessa fase dos pequenos é muito
+									importante.</p>
+								<p><b>O NOME DA GENTE!</b> é um livro exclusivo e personalizável que incentiva a criança
+									a reconhecer o seu nome escrito, as letras, os sons, a similaridade com outras
+									palavras e propõe a participação da família por meio da leitura, de forma
+									prazerosa, no processo de alfabetização.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Start Book Overview -->
+		<section id="mu-book-overview">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-book-overview-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title">Uma forma diferente e encantadora de ajudar na alfabetização!</h2>
+								<span class="mu-header-dot"></span>
+								<p>Nossa proposta parte da ideia de que o nome próprio é um importante elemento no processo da alfabetização infantil. Por isso, o livro apresenta esse elemento em uma história leve e divertida, na qual uma folha de papel em branco busca alguém que possa lhe rabiscar, escrever, desenhar.</p>
+								<p>Como cada exemplar é personalizado com o nome da criança que vai recebê-lo, cada uma delas é também personagem do seu próprio livro, o que torna tudo ainda mais legal.</p>
+							</div>
+
+							<!-- Start Book Overview Content -->
+							<div class="mu-book-overview-content">
+								<div class="row">
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-book-overview-single">
+											<span class="mu-book-overview-icon-box">
+												<i class="fa fa-child" aria-hidden="true"></i>
+											</span>
+											<h4>Personalização</h4>
+											<p>Neste livro a criança se torna parte da história, reconhece o seu nome e se identifica como um personagem.</p>
+										</div>
+									</div>
+
+									<div class="col-md-3 col-sm-6">
+											<div class="mu-book-overview-single">
+												<span class="mu-book-overview-icon-box">
+													<i class="fa fa-book" aria-hidden="true"></i>
+												</span>
+												<h4>Alfabetização</h4>
+												<p>Incentiva a criança a reconhecer o seu nome escrito, as letras, os sons e a similaridade com outras palavras.</p>
+											</div>
+									</div>
+
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-book-overview-single">
+											<span class="mu-book-overview-icon-box">
+												<i class="fa fa-glide-g" aria-hidden="true"></i>
+											</span>
+											<h4>Grafia do nome</h4>
+											<p>Diferentes grafia do nome, explorando o tipo de letra, que é apresentado na forma cursiva e bastão.</p>
+										</div>
+									</div>
+
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-book-overview-single">
+											<span class="mu-book-overview-icon-box">
+												<i class="fa fa-heart" aria-hidden="true"></i>
+											</span>
+											<h4>Dedicatória</h4>
+											<p>Para tornar o livro ainda mais especial, a dedicatória da folha de rosto é personalizada com o seu próprio texto. </p>
+										</div>
+									</div>
+
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-book-overview-single">
+											<span class="mu-book-overview-icon-box">
+												<i class="fa fa-id-badge" aria-hidden="true"></i>
+											</span>
+											<h4>Idade</h4>
+											<p>Recomendado para crianças de 3 a 6 anos.
+											</p>
+										</div>
+									</div>
+
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-book-overview-single">
+											<span class="mu-book-overview-icon-box">
+												<i class="fa fa-info" aria-hidden="true"></i>
+											</span>
+											<h4>Formato</h4>
+											<p>Canoa com 23cm de largura por 20cm de altura.</p>
+										</div>
+									</div>
+								
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-book-overview-single">
+											<span class="mu-book-overview-icon-box">
+												<i class="fa fa-picture-o" aria-hidden="true"></i>
+											</span>
+											<h4>Páginas</h4>
+											<p>Impressão digital colorida com 12 páginas.</p>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+							<!-- End Book Overview Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Book Overview -->
+
+		<!-- Start Video Review --> 
+		<section id="mu-video-review">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-video-review-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title">O projeto Dia Nacional do Livro Infantil (DNLI)</h2>
+								<span class="mu-header-dot"></span>
+								<p>Iniciado em 2016, o projeto DNLI tem apoiado escolas na organização de <b>ações especiais</b> voltadas a alunos da
+									pré-escola e séries iniciais para o desenvolvimento do gosto pela leitura. Além de incentivar atividades como rodas
+									de leitura, leitura compartilhada, contação de histórias e teatro, a principal estratégia do projeto consiste na
+									utilização de <b>livros personalizados</b>. Os livros personalizados permitem que a própria criança se torne parte da
+									história, reconheça o seu nome e se identifique como um personagem, com suas características próprias e dentro de um
+									contexto ligado à sua realidade.</p>
+							</div>
+
+							<!-- Start Video Review Content -->
+							<div class="mu-video-review-content">
+								<iframe class="mu-video-iframe" width="100%" height="480"
+									src="https://www.youtube.com/embed/51-FIMWXAhw" frameborder="0"
+									allowfullscreen></iframe>
+							</div>
+							<!-- End Video Review Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Video Review -->
+
+		<!-- Start Author -->
+		<section id="mu-author">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-author-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title">Sobre os autores</h2>
+								<span class="mu-header-dot"></span>
+							</div>
+
+							<!-- Start Author Content -->
+							<div class="mu-author-content">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="mu-author-image">
+											<center>
+											<img src="assets/images/naira.jpg" alt="Author Image">
+											</center>
+											<br>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="mu-author-info">
+											<h3>Naira Passoni &nbsp; &nbsp; 
+												<div class="mu-author-socialB">
+												<a href="https://www.linkedin.com/in/naira-passoni-6756bb101/" target="_blank">
+												<i class="fa fa-linkedin"></i></a>
+												</div>
+											</h3>
+											<p> Nasci em 1976 na cidade de Palmeira, no Paraná, mas cresci na capital, Curitiba, e me considero praticamente uma
+												Curitibana, com os defeitos e virtudes tão característicos daqui. Desde muito cedo descobri o gosto por escrever e
+												escolhi estudar Jornalismo para contar histórias da vida real. Porém, a vida real me levou a trabalhar com
+												Comunicação Institucional e Marketing, por muitos anos, em empresas do setor educacional, nas quais descobri que
+												quando o bichinho da educação nos morde, não tem mais jeito. Talvez por este motivo, tenha me aventurado na escrita
+												literária, como co-autora do livro O Nome da gente, e decidido me dedicar a produção de conteúdos e criação de novos
+												produtos para esse nicho. Escrevi, também, um romance-ficção para adultos, chamado Conexões Digitais, que aborda um
+												tema bastante atual, os relacionamentos virtuais e os seus riscos potenciais. Além de profissional, também sou mãe.
+												Por isso, espero que o meu trabalho contribua com o desenvolvimento intelectual das crianças e colabore para que o
+												Brasil se torne uma nação leitora. Afinal, não nos custa ter muitos sonhos quando podemos trabalhar para tentar
+												tornar, pelo menos alguns deles, possíveis.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<div class="mu-author-image">
+											<center>
+												<img src="assets/images/parau.jpg" alt="Author Image">
+											</center>
+											<br>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="mu-author-info">
+											<h3>Parahuari Branco &nbsp; &nbsp;
+												<div class="mu-author-socialB">
+													<a href="https://www.linkedin.com/in/parau/" target="_blank">
+														<i class="fa fa-linkedin"></i></a>
+												</div>
+											</h3>
+											<p> Parahuari ou somente Parau como também sou conhecido 🙂. Sou apaixonado pela área de educação. Tenho mais de 20 anos de experiência no desenvolvimento de soluções
+												tecnológicas voltadas a aprendizagem. Ao longo desses anos, tive a oportunidade de desempenhar diferentes
+												papéis como professor, programador, autor, designer instrucional, gerente de projetos e pesquisador. Trabalhei no desenvolvimento de diferentes tipos de soluções educativas como portais educacionais,
+												livros didáticos digitais, simulações, sistemas adaptativos e jogos educativos. Hoje estou envolvido na pesquisa
+												e desenvolvimento de soluções que incentivam a leitura e promovem a criatividade digital.
+												A partir do estudo de novas soluções para impressão e das pesquisas mais recentes sobre alfabetização é que surgiu a ideia deste livro.
+												Acredito que a família pode e deve participar do processo de alfabetização. 
+												Espero que esta obra ajude neste processo. Lembre-se!! Investir em educação é também investir em um mundo melhor.
+											</p>
+										</div>
+									</div>
+								</div>
+	
+
+							</div>
+							<!-- End Author Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Author -->
+
+		<!-- Start Testimonials -->
+		<section id="mu-testimonials">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="mu-testimonials-area">
+								<div class="mu-heading-area">
+									<h2 class="mu-heading-title">Depoimentos</h2>
+									<span class="mu-header-dot"></span>
+								</div>
+	
+								<div class="mu-testimonials-block">
+									<ul class="mu-testimonial-slide">
+	
+										<li>
+											<p>"Arrasou!!!!! Adoramos os livros!!! Meus filhos vibraram com a surpresa!!!!!! E que venham mais livros lindos como esse."</p>
+											<img class="mu-rt-img" src="assets/images/depo01.jpg" alt="img">
+											<h5 class="mu-rt-name">Maria Carolina Sabbag Krieger</h5>
+											<span class="mu-rt-title">Mãe dos gêmeos Isadora e Enrico.</span>
+										</li>
+	
+										<li>
+											<p>"Meu filho Lucca ficou maluquinho ao ver o nome do personagem ser igual ao dele!!!  Expliquei que o Lucca do livro era ele: 'Mãe sou eu de verdade?! Eu também vou escrever assim?', perguntou. Muito legal. Parabéns!!!"</p>
+											<img class="mu-rt-img" src="assets/images/depo02.jpg" alt="img">
+											<h5 class="mu-rt-name">Yguaciara Barbieri</h5>
+											<span class="mu-rt-title">Mãe do Lucca 5 anos.</span>
+										</li>
+	
+										<li>
+											<p>"Um livro divertido, bem ilustrado, de fácil compreensão para a criança. Surpreendeu! Minha filha caçula ganhou da
+												escola, como presente pelo Dia das Crianças. Quando li pela primeira vez para ela, a irmã mais velha comentou
+												admirada: 'Mamãe! A Ana Clara tem um livro com o nome dela!'. E a pequena ficou orgulhosa, sentindo-se mais
+												valorizada e satisfeita com seu próprio nome."</p>
+											<img class="mu-rt-img" src="assets/images/depo03.jpg" alt="img">
+											<h5 class="mu-rt-name">Irene Hiroko</h5>
+											<span class="mu-rt-title">Mãe da Ana Clara.</span>
+										</li>
+	
+										<li>
+											<p>"Quando minha filha leu a dedicatória, se pôs a chorar....e nós também! Que amor mesmo, como um livro personalizado é capaz de sensibilizar uma criança! Essa  é uma lembrança que será guardada para toda a vida!"</p>
+											<img class="mu-rt-img" src="assets/images/depo04.jpg" alt="img">
+											<h5 class="mu-rt-name">Simone Saliba</h5>
+											<span class="mu-rt-title">Mãe da Julia e da Manuela.</span>
+										</li>
+		
+	
+									</ul>
+								</div>
+	
+	
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		<!-- End Testimonials -->
+	
+
+		<!-- Start Pricing -->
+		<section id="mu-pricing">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-pricing-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp; &nbsp; COMPRAR!</h2>
+								<span class="mu-header-dot"></span>
+								<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+									Ipsum has been the industry's standard dummy text ever</p>-->
+							</div>
+
+							<!-- Start Pricing Content -->
+							<div class="mu-pricing-content">
+								<div class="row justify-content-center">
+
+									<!-- Pricing Single Content -->
+									<div class="col-sm-6 col-md-4">
+										<div class="mu-pricing-single">
+
+											<div class="mu-pricing-single-head">
+												<h4>O NOME DA GENTE</h4>
+												<p class="mu-price-tag">
+													<span>$</span> 59,50
+												</p>
+											</div>
+
+											<ul class="mu-price-feature">
+													<img src="assets/images/capa-pq.jpg" alt="Author Image">
+											</ul>
+
+										</div>
+									</div>
+									<!-- / Pricing Single Content -->
+
+									<!-- Pricing Single Content -->
+									<div class="col-sm-12 col-md-8">
+										<div class="mu-pricing-single mu-popular-price-tag">
+											<div class="mu-pricing-single-head">
+												<h4>OPS! Edição esgotada.</h4>
+												<p class="mu-price-tag">
+													<i class="fa fa-frown-o" aria-hidden="true"></i>
+												</p>
+											</div>
+									
+											<ul class="mu-price-feature">
+												<li> Mas fique tranquilo! Já estamos trabalhando para a <b>próxima edição</b>.
+													<br>
+													Para garantir o seu livro personalizado o mais breve possível,
+													<br>
+													<b>deixe seus dados</b> abaixo e faça a sua reserva.
+													<br>
+													Avisaremos você pelo <b><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</b>. 
+												</li>
+											</ul>
+									
+											<!-- Start Contact Content -->
+											<div class="mu-contact-content">
+												<div id="form-messages"></div>
+												<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+													<div class="form-group">
+														<input type="text" class="form-control" placeholder="Escreva aqui seu nome" id="adNome" name="adNome" required>
+													</div>
+													<div class="form-group">
+														<input onFocus="geolocate()" onfocusout="checkCity()"" type="text" class="form-control" placeholder="Qual a cidade em que o livro será entregue?" id="adCidade" name="adCidade" required>
+													</div>
+													<div class="form-group">
+															<input type="text" class="form-control" placeholder="Seu telefone Whatsapp com DDD" id="adTelefone" name="adTelefone" required>
+													</div>
+													<span id="btnReservar"></span>
+													<script> document.getElementById('btnReservar').innerHTML = trataBotaoFormReserva("reservar");</script>
+												</form>
+									
+											</div>
+											<!-- End Contact Content -->
+									
+									
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Pricing Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Pricing -->
+
+	</main>
+
+	<!-- End main content -->
+
+
+	<!-- Start footer -->
+	<footer id="mu-footer" role="contentinfo">
+		<div class="container">
+			<div class="mu-footer-area">
+				<div class="mu-social-media">
+					<a href="https://www.facebook.com/pagina.aprender.digital/" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.linkedin.com/in/parau/" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a href="mailto:equipe.aprender.digital@gmail.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+				</div>
+				<p class="mu-copyright">&copy; Copyright <b>Editora eTrix</b>. 
+					Page built with markups.io.</p>
+			</div>
+		</div>
+
+	</footer>
+	<!-- End footer -->
+
+
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<!-- Bootstrap -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- Slick slider -->
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
+	<!-- Counter js --
+	<script type="text/javascript" src="assets/js/counter.js"></script> -->
+	<!-- Ajax contact form  -->
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<!-- To access places API-->
+	<script>
+	  var autocomplete;
+	  function activatePlacesSearch(){
+      var options = {
+        types: ['(cities)'],
+        componentRestrictions: { country: "br" }
+      };
+		  var input = document.getElementById('adCidade');
+		  autocomplete = new google.maps.places.Autocomplete(input, options);
+		  autocomplete.setFields(['address_component']);
+    }
+    function checkCity() {
+      var input = document.getElementById('adCidade');
+      if (input.value.length < 4) input.value = "";
+    }
+	  function geolocate() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function (position) {
+					var geolocation = {
+						lat: position.coords.latitude,
+						lng: position.coords.longitude
+					};
+					var circle = new google.maps.Circle(
+						{ center: geolocation, radius: position.coords.accuracy });
+					autocomplete.setBounds(circle.getBounds());
+				});
+			}
+		}  
+	</script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJl6JKRS6ubxwYjnWF44pCbAA5dNkZB8Y&libraries=places&callback=activatePlacesSearch" async defer></script>
+
+	<!-- Custom js -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
