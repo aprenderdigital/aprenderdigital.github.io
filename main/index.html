@@ -547,13 +547,14 @@
 	<script type="text/javascript" src="assets/js/app.js"></script>
 	<!-- To access places API-->
 	<script>
+	  var autocomplete;
 	  function activatePlacesSearch(){
       var options = {
         types: ['(cities)'],
         componentRestrictions: { country: "br" }
       };
 		  var input = document.getElementById('adCidade');
-		  var autocomplete = new google.maps.places.Autocomplete(input, options);
+		  autocomplete = new google.maps.places.Autocomplete(input, options);
 		  autocomplete.setFields(['address_component']);
     }
     function checkCity() {

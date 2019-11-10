@@ -16,11 +16,14 @@ $(function() {
 
 		// Submit the form using AJAX.
 		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
+			type: 'GET',
+			url: 'https://us-central1-aprender-digital-ugugho.cloudfunctions.net/reservarONDG',
+			dataType: 'text html',
+			cache: false,
 			data: formData
 		})
 		.done(function(response) {
+			
 			// Make sure that the formMessages div has the 'success' class.
 			$(formMessages).removeClass('error');
 			$(formMessages).addClass('success');
@@ -33,7 +36,8 @@ $(function() {
 			$('#adCidade').val('');
 			$('#adTelefone').val('');
 		})
-		.fail(function(data) {
+		.fail(function(data, textStatus, errorThrown) {
+			console.log(textStatus, errorThrown, data.readyState, data.status, data.statusText, data.getAllResponseHeaders());
 			// Make sure that the formMessages div has the 'error' class.
 			$(formMessages).removeClass('success');
 			$(formMessages).addClass('error');
