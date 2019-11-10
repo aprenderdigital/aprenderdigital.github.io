@@ -11,6 +11,8 @@ $(function() {
 		// Stop the browser from submitting the form.
 		e.preventDefault();
 
+		document.getElementById('btnReservar').innerHTML = trataBotaoFormReserva("enviando");
+
 		// Serialize the form data.
 		var formData = $(form).serialize();
 
@@ -29,15 +31,21 @@ $(function() {
 			$(formMessages).addClass('success');
 
 			// Set the message text.
-			$(formMessages).text(response);
+			//$(formMessages).text(response); resposta do servidor
+			//$(formMessages).text("Parabéns!!! O seu pedido foi incluído em nossa lista de espera.");
+			document.getElementById('form-messages').innerHTML = 'Parabéns!!! O seu pedido foi incluído em nossa lista de espera.<br>'+
+																  'nome: <b>' + $('#adNome').val() + '</b><br>' +
+																  'entrega: <b>' + $('#adCidade').val() + '</b><br>' +
+																  'telefone: <b>' + $('#adTelefone').val() + '</b>';
 
 			// Clear the form.
 			$('#adNome').val('');
 			$('#adCidade').val('');
 			$('#adTelefone').val('');
+			document.getElementById('btnReservar').innerHTML = trataBotaoFormReserva("nova reserva");
 		})
 		.fail(function(data, textStatus, errorThrown) {
-			console.log(textStatus, errorThrown, data.readyState, data.status, data.statusText, data.getAllResponseHeaders());
+			//console.log(textStatus, errorThrown, data.readyState, data.status, data.statusText, data.getAllResponseHeaders());
 			// Make sure that the formMessages div has the 'error' class.
 			$(formMessages).removeClass('success');
 			$(formMessages).addClass('error');
@@ -46,10 +54,11 @@ $(function() {
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
 			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+				$(formMessages).text('Oops! Ocorreu um erro na reserva. Por favor, tente novamente.');
 			}
+
+			document.getElementById('btnReservar').innerHTML = trataBotaoFormReserva("tentar novamente");
 		});
 
 	});
-
 });

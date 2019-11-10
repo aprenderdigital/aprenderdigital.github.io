@@ -39,7 +39,26 @@
 </head>
 
 <body>
-
+<script>
+function trataBotaoFormReserva(tipo) {
+	switch (tipo) {
+		case "reservar":
+			return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
+			           <span id='txtBtnReservar' name='txtBtnReservar'>RESERVAR AGORA!</span>
+		            </button>`;
+		case "nova reserva":
+				return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
+							<span id='txtBtnReservar' name='txtBtnReservar'>ENVIAR NOVA RESERVA</span>
+			 			</button>`;
+ 		case "tentar novamente":
+		 		return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
+							<span id='txtBtnReservar' name='txtBtnReservar'>TENTAR NOVAMENTE</span>
+			 			</button>`;
+		 case "enviando":
+		 		return `Enviando reserva. Aguarde...`;
+	}
+}
+</script>
 
 	<!-- Start Header -->
 	<header id="mu-header" class="" role="banner">
@@ -70,11 +89,11 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav mu-menu navbar-right">
 							<li><a href="#">INÍCIO</a></li>
-							<li><a href="#mu-book-overview">OVERVIEW</a></li>
-							<li><a href="#mu-author">AUTHOR</a></li>
-							<li><a href="#mu-pricing">PRICE</a></li>
-							<li><a href="#mu-testimonials">TESTIMONIALS</a></li>
-							<li><a href="#mu-contact">CONTACT</a></li>
+							<li><a href="#mu-book-overview">LIVRO</a></li>
+							<li><a href="#mu-video-review">VÍDEO</a></li>
+							<li><a href="#mu-author">AUTORES</a></li>
+							<li><a href="#mu-testimonials">DEPOIMENTOS</a></li>
+							<li><a href="#mu-pricing">COMPRAR</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
@@ -103,7 +122,7 @@
 						<p>Sim, um livro em que cada criança faz parte de uma divertida história! E que tal se esse
 							livro, além de divertido, ainda colabore com a alfabetização? Gostou da ideia? Conheça,
 							então, <b>O NOME DA GENTE!</b></p>
-						<a href="#" class="mu-primary-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp; &nbsp; COMPRAR!</a>
+						<a href="#mu-pricing" class="mu-primary-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp; &nbsp; COMPRAR!</a>
 						<!--<span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span>-->
 					</div>
 				</div>
@@ -118,7 +137,7 @@
 
 	<main role="main">
 
-		<section id="mu-author">
+		<section id="mu-book-overview">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -315,11 +334,41 @@
 												Brasil se torne uma nação leitora. Afinal, não nos custa ter muitos sonhos quando podemos trabalhar para tentar
 												tornar, pelo menos alguns deles, possíveis.
 											</p>
-	
-
 										</div>
 									</div>
 								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<div class="mu-author-image">
+											<center>
+												<img src="assets/images/parau.jpg" alt="Author Image">
+											</center>
+											<br>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="mu-author-info">
+											<h3>Parahuari Branco &nbsp; &nbsp;
+												<div class="mu-author-socialB">
+													<a href="https://www.linkedin.com/in/parau/" target="_blank">
+														<i class="fa fa-linkedin"></i></a>
+												</div>
+											</h3>
+											<p> Parahuari ou somente Parau como também sou conhecido 🙂. Sou apaixonado pela área de educação. Tenho mais de 20 anos de experiência no desenvolvimento de soluções
+												tecnológicas voltadas a aprendizagem. Ao longo desses anos, tive a oportunidade de desempenhar diferentes
+												papéis como professor, programador, autor, designer instrucional, gerente de projetos e pesquisador. Trabalhei no desenvolvimento de diferentes tipos de soluções educativas como portais educacionais,
+												livros didáticos digitais, simulações, sistemas adaptativos e jogos educativos. Hoje estou envolvido na pesquisa
+												e desenvolvimento de soluções que incentivam a leitura e promovem a criatividade digital.
+												A partir do estudo de novas soluções para impressão e das pesquisas mais recentes sobre alfabetização é que surgiu a ideia deste livro.
+												Acredito que a família pode e deve participar do processo de alfabetização. 
+												Espero que esta obra ajude neste processo. Lembre-se!! Investir em educação é também investir em um mundo melhor.
+											</p>
+										</div>
+									</div>
+								</div>
+	
+
 							</div>
 							<!-- End Author Content -->
 
@@ -329,6 +378,64 @@
 			</div>
 		</section>
 		<!-- End Author -->
+
+		<!-- Start Testimonials -->
+		<section id="mu-testimonials">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="mu-testimonials-area">
+								<div class="mu-heading-area">
+									<h2 class="mu-heading-title">Depoimentos</h2>
+									<span class="mu-header-dot"></span>
+								</div>
+	
+								<div class="mu-testimonials-block">
+									<ul class="mu-testimonial-slide">
+	
+										<li>
+											<p>"Arrasou!!!!! Adoramos os livros!!! Meus filhos vibraram com a surpresa!!!!!! E que venham mais livros lindos como esse."</p>
+											<img class="mu-rt-img" src="assets/images/depo01.jpg" alt="img">
+											<h5 class="mu-rt-name">Maria Carolina Sabbag Krieger</h5>
+											<span class="mu-rt-title">Mãe dos gêmeos Isadora e Enrico.</span>
+										</li>
+	
+										<li>
+											<p>"Meu filho Lucca ficou maluquinho ao ver o nome do personagem ser igual ao dele!!!  Expliquei que o Lucca do livro era ele: 'Mãe sou eu de verdade?! Eu também vou escrever assim?', perguntou. Muito legal. Parabéns!!!"</p>
+											<img class="mu-rt-img" src="assets/images/depo02.jpg" alt="img">
+											<h5 class="mu-rt-name">Yguaciara Barbieri</h5>
+											<span class="mu-rt-title">Mãe do Lucca 5 anos.</span>
+										</li>
+	
+										<li>
+											<p>"Um livro divertido, bem ilustrado, de fácil compreensão para a criança. Surpreendeu! Minha filha caçula ganhou da
+												escola, como presente pelo Dia das Crianças. Quando li pela primeira vez para ela, a irmã mais velha comentou
+												admirada: 'Mamãe! A Ana Clara tem um livro com o nome dela!'. E a pequena ficou orgulhosa, sentindo-se mais
+												valorizada e satisfeita com seu próprio nome."</p>
+											<img class="mu-rt-img" src="assets/images/depo03.jpg" alt="img">
+											<h5 class="mu-rt-name">Irene Hiroko</h5>
+											<span class="mu-rt-title">Mãe da Ana Clara.</span>
+										</li>
+	
+										<li>
+											<p>"Quando minha filha leu a dedicatória, se pôs a chorar....e nós também! Que amor mesmo, como um livro personalizado é capaz de sensibilizar uma criança! Essa  é uma lembrança que será guardada para toda a vida!"</p>
+											<img class="mu-rt-img" src="assets/images/depo04.jpg" alt="img">
+											<h5 class="mu-rt-name">Simone Saliba</h5>
+											<span class="mu-rt-title">Mãe da Julia e da Manuela.</span>
+										</li>
+		
+	
+									</ul>
+								</div>
+	
+	
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		<!-- End Testimonials -->
+	
 
 		<!-- Start Pricing -->
 		<section id="mu-pricing">
@@ -401,7 +508,8 @@
 													<div class="form-group">
 															<input type="text" class="form-control" placeholder="Seu telefone Whatsapp com DDD" id="adTelefone" name="adTelefone" required>
 													</div>
-													<button type="submit" class="mu-order-btn"><span>RESERVAR AGORA!</span></button>
+													<span id="btnReservar"></span>
+													<script> document.getElementById('btnReservar').innerHTML = trataBotaoFormReserva("reservar");</script>
 												</form>
 									
 											</div>
@@ -410,37 +518,6 @@
 									
 										</div>
 									</div>
-									<!-- / Pricing Single Content -->
-
-									<!-- Pricing Single Content --
-									<div class="col-sm-6 col-md-4">
-										<div class="mu-pricing-single">
-
-
-											<div class="mu-pricing-single-head">
-												<h4>FAÇA A SUA RESERVA</h4>
-												<p class="mu-price-tag">
-													<span>$</span> 45
-												</p>
-											</div>
-
-											<ul class="mu-price-feature">
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-											</ul>
-
-											<div class="mu-pricing-single-footer">
-												<a href="#" class="mu-order-btn">Order Now!</a>
-											</div>
-
-
-										</div>
-									</div>
-									<-- / Pricing Single Content -->
-
-
 								</div>
 							</div>
 							<!-- End Pricing Content -->
@@ -451,65 +528,6 @@
 			</div>
 		</section>
 		<!-- End Pricing -->
-
-		<!-- Start Testimonials -->
-		<section id="mu-testimonials">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-testimonials-area">
-							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Depoimentos</h2>
-								<span class="mu-header-dot"></span>
-							</div>
-
-							<div class="mu-testimonials-block">
-								<ul class="mu-testimonial-slide">
-
-									<li>
-										<p>"Arrasou!!!!! Adoramos os livros!!! Meus filhos vibraram com a surpresa!!!!!! E que venham mais livros lindos como esse."</p>
-										<img class="mu-rt-img" src="assets/images/depo01.jpg" alt="img">
-										<h5 class="mu-rt-name">Maria Carolina Sabbag Krieger</h5>
-										<span class="mu-rt-title">Mãe dos gêmeos Isadora e Enrico.</span>
-									</li>
-
-									<li>
-										<p>"Meu filho Lucca ficou maluquinho ao ver o nome do personagem ser igual ao dele!!!  Expliquei que o Lucca do livro era ele: 'Mãe sou eu de verdade?! Eu também vou escrever assim?', perguntou. Muito legal. Parabéns!!!"</p>
-										<img class="mu-rt-img" src="assets/images/depo02.jpg" alt="img">
-										<h5 class="mu-rt-name">Yguaciara Barbieri</h5>
-										<span class="mu-rt-title">Mãe do Lucca 5 anos.</span>
-									</li>
-
-									<li>
-										<p>"Um livro divertido, bem ilustrado, de fácil compreensão para a criança. Surpreendeu! Minha filha caçula ganhou da
-											escola, como presente pelo Dia das Crianças. Quando li pela primeira vez para ela, a irmã mais velha comentou
-											admirada: 'Mamãe! A Ana Clara tem um livro com o nome dela!'. E a pequena ficou orgulhosa, sentindo-se mais
-											valorizada e satisfeita com seu próprio nome."</p>
-										<img class="mu-rt-img" src="assets/images/depo03.jpg" alt="img">
-										<h5 class="mu-rt-name">Irene Hiroko</h5>
-										<span class="mu-rt-title">Mãe da Ana Clara.</span>
-									</li>
-
-									<li>
-										<p>"Quando minha filha leu a dedicatória, se pôs a chorar....e nós também! Que amor mesmo, como um livro personalizado é capaz de sensibilizar uma criança! Essa  é uma lembrança que será guardada para toda a vida!"</p>
-										<img class="mu-rt-img" src="assets/images/depo04.jpg" alt="img">
-										<h5 class="mu-rt-name">Simone Saliba</h5>
-										<span class="mu-rt-title">Mãe da Julia e da Manuela.</span>
-									</li>
-	
-
-								</ul>
-							</div>
-
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Testimonials -->
-
-
 
 	</main>
 
@@ -523,6 +541,7 @@
 				<div class="mu-social-media">
 					<a href="https://www.facebook.com/pagina.aprender.digital/" target="_blank"><i class="fa fa-facebook"></i></a>
 					<a href="https://www.linkedin.com/in/parau/" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a href="mailto:equipe.aprender.digital@gmail.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
 				</div>
 				<p class="mu-copyright">&copy; Copyright <b>Editora eTrix</b>. 
 					Page built with markups.io.</p>
@@ -541,8 +560,8 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<!-- Slick slider -->
 	<script type="text/javascript" src="assets/js/slick.min.js"></script>
-	<!-- Counter js -->
-	<script type="text/javascript" src="assets/js/counter.js"></script>
+	<!-- Counter js --
+	<script type="text/javascript" src="assets/js/counter.js"></script> -->
 	<!-- Ajax contact form  -->
 	<script type="text/javascript" src="assets/js/app.js"></script>
 	<!-- To access places API-->
