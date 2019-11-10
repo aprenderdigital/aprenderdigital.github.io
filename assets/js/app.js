@@ -34,9 +34,9 @@ $(function() {
 			//$(formMessages).text(response); resposta do servidor
 			//$(formMessages).text("Parabéns!!! O seu pedido foi incluído em nossa lista de espera.");
 			document.getElementById('form-messages').innerHTML = 'Parabéns!!! O seu pedido foi incluído em nossa lista de espera.<br>'+
-																  'nome: <b>' + $('#adNome').val() + '</b><br>' +
-																  'entrega: <b>' + $('#adCidade').val() + '</b><br>' +
-																  'telefone: <b>' + $('#adTelefone').val() + '</b>';
+																  'Nome: <b>' + $('#adNome').val() + '</b><br>' +
+																  'Entrega: <b>' + $('#adCidade').val() + '</b><br>' +
+																  'Telefone: <b>' + $('#adTelefone').val() + '</b>';
 
 			// Clear the form.
 			$('#adNome').val('');
