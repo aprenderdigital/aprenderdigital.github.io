@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Presente</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64612385-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-64612385-2');
+	</script>
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<script>
+			var query = location.search.slice(1);
+			var partes = query.split('&');
+			var data = {};
+			partes.forEach(function (parte) {
+			var chaveValor = parte.split('=');
+			var chave = chaveValor[0];
+			var valor = chaveValor[1];
+			data[chave] = valor;
+			});
+			console.log(data);
+			if (typeof data["sim"] == 'undefined') {
+				window.location.href = 'https://aprender.digital/';
+			}
+		</script>
+		<div class="wrapper">
+			<div class="image-holder">
+				<img src="images/capa.png" alt="">
+			</div>
+            <form id="formulario" action="">
+            	<div id="wizard">
+            		<!-- SECTION 1 -->
+								<h4></h4>
+								<section>
+									<p>
+										Para personalizarmos o livro digital, 
+										por favor informe abaixo os dados da criança que vai receber o livro O NOME DA GENTE: 
+									</p>
+									<br /> 
+									<div class="form-row">
+										<b>Nome</b>
+										<input type="nome" id="nome" onkeypress="desligaErroNome()" onKeyUp="onKeyUpNome()" required placeholder="digite aqui o nome da criança"
+											class="form-control">
+										<spam id="idMsgAvisoNome" class="msgShowAviso">Use no máximo 15 letras. Sugerimos usar o nome sem o sobrenome. Por exemplo: Julia, Ana Cláudia, Felipe.</spam>
+										<spam id="idMsgErroNome" class="msgHideErro">🙄 Precisamos do nome para a geração do livro. Use no máximo 15 letras. Sugerimos usar o nome sem o sobrenome. Por exemplo: Julia, Ana Cláudia, Felipe.</spam>
+										<br />
+										<b>Escolha a frase</b><br />
+											<label><input type="radio" id="dele" name="deleDela" onClick="onDele()" value="dele" checked>
+											O nome <b>dele</b> é <spam id="nomeDele">...</spam></label>
+											<label>
+											<input type="radio" class="custom-control-input" id="dela" name="deleDela"  onClick="onDela()" value="dela">
+											O nome <b>dela</b> é <spam id="nomeDela">...</spam></label>
+		
+									</div>
+								</section>
+			
+								<!-- SECTION 2 -->
+	                <h4></h4>
+					<section>
+						<p>
+							Legal! <spam id="p1-artigo1"></spam> <spam id="p1-nome1"></spam> vai adorar essa surpresa!
+							<br /> <br />
+							Para receber este presente digital gratuito, basta nos informar o seu <b>email</b> abaixo!
+						</p>
+						<br /> <br />
+						<div class="form-row">
+							<input type="email" id="email" onkeypress="desligaErroEmail()" required placeholder="digite aqui o seu email"
+								class="form-control">
+							<spam id="idMsgErroEmail" class="msgHideErro">🙄 Precisamos do seu email para o envio do presente.</spam>
+						</div>
+					</section>
+	                
+					<!-- SECTION 3 -->
+	                <h4></h4>
+	                <section>
+										<p>OK!!! Estamos gerando e enviando o livro digital personalizado 🎁
+										d<spam id="p2-artigo1"></spam> <spam id="p2-nome1"></spam> 
+										para o endereço <b><spam id="p2Email"></spam></b>.</p>
+										<br />
+										<p>Então, corre para conferir a sua caixa de entrada. 😀
+											Se o email não chegar nos próximos minutos 🤞, não deixe de conferir
+										  se ele não ficou parado na sua caixa de spam. 👍   </p>
+	                </section>
+
+            	</div>
+            </form>
+		</div>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		
+		<!-- JQUERY STEP -->
+		<script src="js/jquery.steps.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+
+		<script src="js/main.js"></script>
+<!-- Template created and distributed by Colorlib -->
+</body>
+</html>
