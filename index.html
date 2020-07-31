@@ -87,11 +87,11 @@ function trataBotaoFormReserva(tipo) {
 	switch (tipo) {
 		case "reservar":
 			return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
-			           <span id='txtBtnReservar' name='txtBtnReservar'>RESERVAR AGORA!</span>
+			           <span id='txtBtnReservar' name='txtBtnReservar'>ENVIAR!</span>
 		            </button>`;
 		case "nova reserva":
 				return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
-							<span id='txtBtnReservar' name='txtBtnReservar'>ENVIAR NOVA RESERVA</span>
+							<span id='txtBtnReservar' name='txtBtnReservar'>ENVIAR NOVO CONTATO</span>
 			 			</button>`;
  		case "tentar novamente":
 		 		return `<button type="submit" class="mu-order-btn" id='btnReservar' name='btnReservar'>
@@ -527,20 +527,15 @@ function trataBotaoFormReserva(tipo) {
 									<div class="col-sm-12 col-md-8">
 										<div class="mu-pricing-single mu-popular-price-tag">
 											<div class="mu-pricing-single-head">
-												<h4>Edição esgotada!</h4>
+												<h3>Atendimento por WhatsApp</h3>
 												<p class="mu-price-tag">
-													<i class="fa fa-heart-o" aria-hidden="true"></i>
+													<i class="fa fa-whatsapp" aria-hidden="true"></i>
 												</p>
 											</div>
 									
 											<ul class="mu-price-feature">
-												<li> Mas fique tranquilo! Já estamos trabalhando para a <b>próxima edição</b>.
-													<br>
-													Para garantir o seu livro personalizado o mais breve possível,
-													<br>
-													<b>deixe seus dados</b> abaixo e faça a sua reserva.
-													<br>
-													Avisaremos você pelo <b><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</b>. 
+												<li>Para melhor atender estamos realizando as vendas por <b><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</b>.
+													Preencha os dados abaixo que entraremos em contato. 🙂
 												</li>
 											</ul>
 									
@@ -555,7 +550,7 @@ function trataBotaoFormReserva(tipo) {
 														<input onFocus="geolocate()" onfocusout="checkCity()"" type="text" class="form-control" placeholder="Qual a cidade em que o livro será entregue?" id="adCidade" name="adCidade" required>
 													</div>
 													<div class="form-group">
-															<input type="text" class="form-control" placeholder="Seu telefone Whatsapp com DDD" id="adTelefone" name="adTelefone" required>
+															<input type="text" class="form-control" placeholder="Seu telefone WhatsApp com DDD" id="adTelefone" name="adTelefone" required>
 													</div>
 													<span id="btnReservar"></span>
 													<script> document.getElementById('btnReservar').innerHTML = trataBotaoFormReserva("reservar");</script>
