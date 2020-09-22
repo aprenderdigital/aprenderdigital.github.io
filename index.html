@@ -700,7 +700,7 @@ function trataBotaoFormReserva(tipo) {
 		}
 
 	function onLoadPage(){
-		if (typeof data["concluido"] == 'undefined') {
+		if ((typeof data["concluido"] == 'undefined') && (typeof data["buy"] == 'undefined') ) {
 			iziToast.settings({
 				timeout: 100000,
 		 	  resetOnHover: true,
