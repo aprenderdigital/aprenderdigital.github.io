@@ -59,7 +59,9 @@ $(function(){
                     var nome = document.forms["formulario"]["nome"].value;
                     var g = document.getElementById("p2-artigo1").innerHTML;
 
-                    xhttp.open("GET", "https://us-central1-aprenderdigital-email.cloudfunctions.net/enviarEmailPresente?e=" +
+                    //xhttp.open("GET", "https://us-central1-aprenderdigital-email.cloudfunctions.net/enviarEmailPresente?e=" +
+                    xhttp.open("GET", "https://us-central1-aprender-digital-ugugho.cloudfunctions.net/enviarEmailPresente?e=" +
+
                         document.getElementById("email").value + "&n=" + nome + "&g=" + g);
                     xhttp.send();
 
