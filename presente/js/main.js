@@ -54,7 +54,13 @@ $(function(){
     
                 if (form.checkValidity()) {
                     var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () { console.log(this); }
+                    xhttp.onreadystatechange = function () { 
+                        //console.log("ReadyState:", this.readyState);
+                        if (this.readyState === 4) {
+                            console.log("Status:", this.status);
+                            console.log("Response:", this.responseText);
+                        }
+                    }
                     
                     var nome = document.forms["formulario"]["nome"].value;
                     var g = document.getElementById("p2-artigo1").innerHTML;
@@ -64,9 +70,8 @@ $(function(){
 
                         document.getElementById("email").value + "&n=" + nome + "&g=" + g);
                     xhttp.send();
-                    console.log("https://us-central1-aprender-digital-ugugho.cloudfunctions.net/enviarEmailPresente?e=" +
-
-                        document.getElementById("email").value + "&n=" + nome + "&g=" + g);
+                    //console.log("Request URL:", "https://us-central1-aprender-digital-ugugho.cloudfunctions.net/enviarEmailPresente?e=" +
+                    //    document.getElementById("email").value + "&n=" + nome + "&g=" + g);
 
                     document.getElementById("p2Email").innerHTML = document.getElementById("email").value;
                 }
