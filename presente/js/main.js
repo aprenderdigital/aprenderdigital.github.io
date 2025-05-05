@@ -64,6 +64,9 @@ $(function(){
 
                         document.getElementById("email").value + "&n=" + nome + "&g=" + g);
                     xhttp.send();
+                    console.log("https://us-central1-aprender-digital-ugugho.cloudfunctions.net/enviarEmailPresente?e=" +
+
+                        document.getElementById("email").value + "&n=" + nome + "&g=" + g);
 
                     document.getElementById("p2Email").innerHTML = document.getElementById("email").value;
                 }
